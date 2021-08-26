@@ -34,6 +34,11 @@
       "name": "Курс по ReactJS ToDo",
       "colorId": 7,
       "id": 7
+    },
+    {
+      "name": "jhk",
+      "colorId": 5,
+      "id": 8
     }
   ],
   "tasks": [
@@ -132,6 +137,12 @@
       "text": "wefe",
       "completed": false,
       "id": 22
+    },
+    {
+      "listId": 8,
+      "text": "hjkj",
+      "completed": false,
+      "id": 23
     }
   ],
   "colors": [
