@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Route, useHistory } from 'react-router-dom';
+import { Route, useHistory, useLocation } from 'react-router-dom';
 
 import { List, AddList, Tasks } from './components';
 
@@ -9,6 +9,7 @@ function App() {
   const [colors, setColors] = useState(null);
   const [activeItem, setActiveItem] = useState(null);
   let history = useHistory();
+  let location = useLocation();
 
   useEffect(() => { //useEffect дает понять отрендерилось ли компонент App
     axios.get('http://localhost:3001/lists?_expand=color&_embed=tasks').then(({ data }) => {
