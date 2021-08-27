@@ -1,6 +1,9 @@
-##ToDoList на ReactJS
+# ToDoList на ReactJS
 
-#Использовала технологии -
-ReactJS (useState, useReducer, useEffect)
-React Router
-Axios
+## Проект выполнила: Камила Балабекова
+
+## Используются технологии
+- ReactJS (useState, useReducer, useEffect)
+- React Router
+- Axios
+- SCSS
