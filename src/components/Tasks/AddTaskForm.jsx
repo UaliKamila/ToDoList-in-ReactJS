@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 import addSvg from '../../assets/img/add.svg';
@@ -16,7 +16,6 @@ const AddTaskForm = ({ list, onAddTask }) => {
 
 	const addTask = () => {
 		const obj = {
-			
 			listId: list.id,
 			text: inputValue,
 			completed: false
@@ -25,11 +24,10 @@ const AddTaskForm = ({ list, onAddTask }) => {
 		axios
 			.post('http://localhost:3001/tasks', obj)
 			.then(({ data }) => {
-				console.log(data);
 				onAddTask(list.id, data);
 				toggleFormVisible();
 		})
-		.catch(() => {
+		.catch(e => {
 			alert('Ошибка при добавлении задачи!');
 		})
 		.finally(() => {
@@ -54,7 +52,7 @@ const AddTaskForm = ({ list, onAddTask }) => {
 						onChange={e => setInputValue(e.target.value)}
 					/>
 					<button disabled={isLoading} onClick={addTask} className="button">
-						{isLoading ? 'Добавление' : 'Добавить задачу'}
+						{isLoading ? 'Добавление...' : 'Добавить задачу'}
 					</button>
 					<button onClick={toggleFormVisible} className="button button--gray">
 						Отмена
